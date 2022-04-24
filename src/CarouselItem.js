@@ -1,6 +1,7 @@
 import h from 'hyperscript'
 import moment from 'moment'
 
+
 const relativeDate = dateStr => moment(dateStr, 'YYYY-MM-DD').fromNow()
 
 const Controls = ({ slug, youtubeVideoId }) =>
@@ -44,7 +45,7 @@ const CarouselItem = ({
 }) =>
   h(
     'div.carousel-item',
-    h('img.carousel-item__img', { src: imageUrl, alt: '' }),
+    h('img.carousel-item__img .lozad', { 'data-src': imageUrl, alt: '' }),
     h(
       'div.carousel-item__details',
       Controls({ slug, youtubeVideoId }),
